@@ -11,9 +11,13 @@ YES
 
 To give opportunity to everybody to contribute
 
-#How to build fromsource?
+#How to build from source?
 
 Windows binaries are ready to use in make direcotry, but if you want, just go in 
-make direcotory and launch
-    make all
-    
+*make* directory and launch:
+
+     make all
+
+##Contact
+maxint@tiscali.it
+
