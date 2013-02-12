@@ -19,5 +19,5 @@ Windows binaries are ready to use in make direcotry, but if you want, just go in
      make all
 
 ##Contact
-maxint@tiscali.it
+Use Github or send an email to maxint@tiscali.it
 
