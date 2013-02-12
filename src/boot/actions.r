@@ -134,7 +134,7 @@ tail: action [
 ]
 
 head?: action [
-	{Returns TRUE if a series is at its beginning.}
+	{Returns TRUE if a series is at its beginnint.}
 	series [series! gob! port!]
 ]
 
@@ -172,13 +172,13 @@ at: action [
 
 index?: action [
 	{Returns the current position (index) of the series.}
-	series [series! gob! port! none!]
+	series [series! gob! port!]
 	/xy {Returns index as an XY pair offset}
 ]
 
 length?: action [
 	{Returns the length (from the current position for series.)}
-	series [series! port! map! tuple! bitset! object! gob! struct! any-word! none!]
+	series [none! series! port! map! tuple! bitset! object! gob! struct! any-word!]
 ]
 
 ;-- Series Extraction

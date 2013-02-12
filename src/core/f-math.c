@@ -427,10 +427,8 @@ REBINT Emit_Decimal(REBYTE *cp, REBDEC d, REBFLG trim, REBYTE point, REBINT deci
 	REBYTE *start = cp, *sig;
 	REBINT e, sgn;
 
-	/* Deal with 0 as a special case */
-	if (d == 0.0) {
-		/* negative 0 ? */
-		if (signbit (d)) *cp++ = '-';
+	// Deal with 0 as special case:
+	if (d == 0.0 || d == -0.0) {
 		*cp++ = '0';
 		if (!trim) {
 			*cp++ = point;

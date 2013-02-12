@@ -73,8 +73,9 @@
 	case A_TAILQ:
 		if (IS_NONE(val)) return R_TRUE;
 		goto trap_it;
-	case A_INDEXQ:
 	case A_LENGTHQ:
+		if (IS_NONE(val)) return R_NONE;
+		goto trap_it;
 	case A_SELECT:
 	case A_FIND:
 	case A_REMOVE:

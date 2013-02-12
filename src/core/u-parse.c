@@ -213,7 +213,7 @@ void Print_Parse_Index(REBCNT type, REBVAL *rules, REBSER *series, REBCNT index)
 
 	// Do we match to a char set?
 	case REB_BITSET:
-		flags = Check_Bit(VAL_SERIES(item), GET_ANY_CHAR(series, index), !HAS_CASE(parse));
+		flags = Check_Bit(VAL_SERIES(item), GET_ANY_CHAR(series, index), HAS_CASE(parse));
 		index = flags ? index + 1 : NOT_FOUND;
 		break;
 /*
@@ -520,7 +520,7 @@ bad_target:
 				}
 				else {
 					i = Find_Str_Str(series, 0, index, series->tail, 1, VAL_SERIES(item), VAL_INDEX(item), VAL_LEN(item), HAS_CASE(parse));
-					if (i != NOT_FOUND && is_thru) i += VAL_LEN(item);
+					if (is_thru) i += VAL_LEN(item);
 				}
 				if (i >= series->tail) i = NOT_FOUND;
 			}

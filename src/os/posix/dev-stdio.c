@@ -42,8 +42,6 @@
 #include <errno.h>
 #include <unistd.h>
 #include <signal.h>
-#include <stdlib.h>
-#include <string.h>
 
 #include "reb-host.h"
 #include "host-lib.h"

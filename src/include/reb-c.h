@@ -58,7 +58,7 @@ typedef unsigned short  u16;
 typedef long            i32;
 typedef unsigned long   u32;
 
-#ifndef DEF_UINT		// some systems define it, don't define it again
+#ifdef DEF_UINT		// some systems define it, don't define it again
 typedef unsigned int    uint;
 #endif
 
@@ -221,6 +221,7 @@ typedef void(*CFUNC)(void *);
 #define GET_FLAGS(v,f,g)    (((v) & ((1<<(f)) | (1<<(g)))) != 0)
 #define SET_FLAG(v,f)       ((v) |= (1<<(f)))
 #define CLR_FLAG(v,f)       ((v) &= ~(1<<(f)))
+#define CLR_FLAGS(v,f,g)    ((v) &= ~((1<<(f)) | (1<<(g))))
 
 #ifdef min
 #define MIN(a,b) min(a,b)
