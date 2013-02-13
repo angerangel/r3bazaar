@@ -9,7 +9,8 @@ YES
 
 #Why a new version of Rebol?
 
-To give opportunity to everybody to contribute
+To give opportunity to everybody to contribute, to have a rebol *always up to date*, where pull request are 
+alway considered and eventually merged in *maximum a week*.
 
 #How to build from source?
 
