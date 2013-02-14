@@ -7,9 +7,8 @@ it has graphic functionality (VID dialect) working on windows.
 Rebol is a fantastic programming language, cross-platform, really easy to use and to create wonderful gui, 
 take a look at these links _(based on Rebol 2)_:
 
-*http://www.youtube.com/playlist?list=PLA8DCE29E7EA88BBB
-
-*http://www.rebol.com/oneliners.html
+* http://www.youtube.com/playlist?list=PLA8DCE29E7EA88BBB
+* http://www.rebol.com/oneliners.html
 
 Unfortunately Rebol 2 is closed and no more maintained since 2011, you can download last Rebol 2 version here: http://www.rebol.com/download-view.html
 
