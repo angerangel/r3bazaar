@@ -19,7 +19,7 @@ Rebol 3 is open source.
 
 YES
 
-#Why a new version of Rebol?
+#Why a new version of Rebol 3?
 
 To give opportunity to everybody to contribute, to have a rebol **always up to date**, where pull request are 
 alway considered and eventually merged in **maximum a week**.
