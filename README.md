@@ -26,7 +26,8 @@ alway considered and eventually merged in **maximum a week**.
 
 #How to build from source?
 
-Windows binaries are ready to use in make direcotry, but if you want, just go in 
+Windows binaries are ready to use in make direcotry, use **r3-view.exe** 
+but if you want to bould from source, just go in 
 *make* directory and launch:
 
      make all
