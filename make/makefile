@@ -56,7 +56,7 @@ R3LIB= r3.dll
 
 ### Build targets:
 top:
-	make r3-core
+	$(MAKE) r3-core
 
 update:
 	-cd $(UP)/; cvs -q update src
@@ -68,14 +68,14 @@ clean:
 	@-rm -rf $(R3LIB) r3-core-host$(BIN_SUFFIX) r3-view-host$(BIN_SUFFIX) r3-core$(BIN_SUFFIX) r3-view$(BIN_SUFFIX) encap-view$(BIN_SUFFIX) encap-core$(BIN_SUFFIX) objs/
 
 all:
-	make clean
-	make lib	
-	make r3-core-host
-	make r3-view-host
-	make r3-core
-	make r3-view
-	make encap-core
-	make encap-view
+	$(MAKE) clean
+	$(MAKE) lib	
+	$(MAKE) r3-core-host
+	$(MAKE) r3-view-host
+	$(MAKE) r3-core
+	$(MAKE) r3-view
+	$(MAKE) encap-core
+	$(MAKE) encap-view
 	
 prep-lib:
 	$(REBOL) $T/make-headers.r
@@ -127,8 +127,8 @@ prep-encap-boot-core:
 purge:
 	-rm $(R3LIB)
 	-rm host$(BIN_SUFFIX)
-	make lib
-	make r3-core-host
+	$(MAKE) lib
+	$(MAKE) r3-core-host
 
 
 test:
@@ -230,13 +230,13 @@ r3-view: prep-view objs $(OBJS) $(HOST) $(GFX) $(AGG)
 
 # r3/view/encap executable:
 encap-view: objs
-	make encap-boot-view
-	make encap-exe-view
+	$(MAKE) encap-boot-view
+	$(MAKE) encap-exe-view
 
 # r3/core/encap executable:
 encap-core: objs
-	make encap-boot-core
-	make encap-exe-core
+	$(MAKE) encap-boot-core
+	$(MAKE) encap-exe-core
 
 encap-exe-view: prep-encap-view $(OBJS) $(HOST) $(GFX) $(AGG)
 	$(CC) -o encap-view$(BIN_SUFFIX) $(OBJS) $(HOST) $(GFX) $(AGG) $(CLIB)

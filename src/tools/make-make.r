@@ -82,7 +82,7 @@ R3=	$(CD)r3$(BIN_SUFFIX) -qs
 
 ### Build targets:
 top:
-	make r3$(BIN_SUFFIX)
+	$(MAKE) r3$(BIN_SUFFIX)
 
 update:
 	-cd $(UP)/; cvs -q update src
@@ -94,11 +94,11 @@ clean:
 	@-rm -rf libr3.so objs/
 
 all:
-	make clean
-	make prep
-	make r3$(BIN_SUFFIX)
-	make lib
-	make host$(BIN_SUFFIX)
+	$(MAKE) clean
+	$(MAKE) prep
+	$(MAKE) r3$(BIN_SUFFIX)
+	$(MAKE) lib
+	$(MAKE) host$(BIN_SUFFIX)
 
 prep:
 	$(REBOL) $T/make-headers.r
@@ -112,8 +112,8 @@ prep:
 purge:
 	-rm libr3.*
 	-rm host$(BIN_SUFFIX)
-	make lib
-	make host$(BIN_SUFFIX)
+	$(MAKE) lib
+	$(MAKE) host$(BIN_SUFFIX)
 
 test:
 	$(CP) r3$(BIN_SUFFIX) $(UP)/src/tests/
