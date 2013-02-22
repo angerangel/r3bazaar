@@ -12,14 +12,27 @@ take a look at these links _(based on Rebol 2)_:
 
 Unfortunately Rebol 2 is closed source and no more maintained since 2011, you can download last Rebol 2 version here: http://www.rebol.com/download-view.html
 
-Rebol 3 is open source.
+Rebol 3 is open source. There is a community around Rebol products, you can see and join it on http://rebol.informe.com
 
 
 #May I contribute?
 
 YES
 
-#Why a new version of Rebol 3?
+## How may I contrinute?
+
+In any way you like:
+
+* update and add something on our wikis (http://rebol.informe.com/wiki/view/Main_Page  or https://github.com/angerangel/r3bazaar/wiki )
+* find a bug and out it in issues page
+* find a bug, you correct it just forking this project, making your correction and making a pull request
+* ask or answer on the forum: http://rebol.informe.com/forum/
+* publish an article on the blog: http://rebol.informe.com/blog/
+* publish an image on the gallery: http://rebol.informe.com/gallery/
+* **condivide Rebol with your firends, write a letter to your favorite magazine about Rebol, word of mouth is the most important thing**
+
+
+#Why a new fork of Rebol 3?
 
 To give opportunity to everybody to contribute, to have a rebol **always up to date**, where pull request are 
 alway considered and eventually merged in **maximum a week**.
