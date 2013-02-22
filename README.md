@@ -19,7 +19,7 @@ Rebol 3 is open source. There is a community around Rebol products, you can see 
 
 YES
 
-## How may I contrinute?
+## How may I contribute?
 
 In any way you like:
 
@@ -29,7 +29,7 @@ In any way you like:
 * ask or answer on the forum: http://rebol.informe.com/forum/
 * publish an article on the blog: http://rebol.informe.com/blog/
 * publish an image on the gallery: http://rebol.informe.com/gallery/
-* **condivide Rebol with your firends, write a letter to your favorite magazine about Rebol, word of mouth is the most important thing**
+* **share Rebol with your friends, write a letter to your favorite magazine about Rebol, word of mouth is the most important thing**
 
 
 #Why a new fork of Rebol 3?
@@ -39,12 +39,12 @@ alway considered and eventually merged in **maximum a week**.
 
 #How to build from source?
 
-Windows binaries are ready to use in make direcotry, use **r3-view.exe** 
-but if you want to bould from source, just go in 
+Windows binaries are ready to use in make directory, use **r3-view.exe** 
+but if you want to build from source, just go in 
 *make* directory and launch:
 
      make all
 
 ##Contact
-Use Github or send an email to maxint@tiscali.it
+Use Github, http://rebol.inform.com or send an email to maxint@tiscali.it
 
