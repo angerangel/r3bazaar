@@ -24,8 +24,8 @@ YES
 In any way you like:
 
 * update and add something on our wikis (http://rebol.informe.com/wiki/view/Main_Page  or https://github.com/angerangel/r3bazaar/wiki )
-* find a bug and out it in issues page
-* find a bug, you correct it just forking this project, making your correction and making a pull request
+* find a bug and put it in issues page
+* find a bug, you may correct it just forking this project, making your correction and making a pull request
 * ask or answer on the forum: http://rebol.informe.com/forum/
 * publish an article on the blog: http://rebol.informe.com/blog/
 * publish an image on the gallery: http://rebol.informe.com/gallery/
