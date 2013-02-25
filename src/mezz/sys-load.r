@@ -23,7 +23,7 @@ REBOL [
 ; BASICS:
 ; Code gets loaded in two ways:
 ;   1. As user code/data - residing in user context
-;   2. As module code/data - residing in it's own context
+;   2. As module code/data - residing in its own context
 ; Module loading can be delayed. This allows special modules like CGI, protocols,
 ; or HTML formatters to be available, but not require extra space.
 ; The system/modules list holds modules for fully init'd modules, otherwise it
