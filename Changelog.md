@@ -2,6 +2,7 @@
 
 * Added build directory
 * *ladislav* corrected some mispelled text
+* *ladislav* added "(modified)" on some function
 
 
 # 21-Feb-2013
