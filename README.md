@@ -39,10 +39,8 @@ alway considered and eventually merged in **maximum a week**.
 
 #How to build from source?
 
-Windows binaries are ready to use in *build* directory, but if you want to build from source, just go in 
-*make* directory and launch:
-
-     make all
+Windows binaries are ready to use in *build* directory, but if you want to build from source
+*make* directory and follwo this guide: https://github.com/angerangel/r3bazaar/wiki/Building-from-source
 
 ##Contact
 Use Github, http://rebol.inform.com or send an email to maxint@tiscali.it
