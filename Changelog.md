@@ -1,3 +1,7 @@
+# 27-Feb-2013
+
+* Added *hostilefork* suggestion to allow NEW-LINE and NEW-LINE? to accept PAREN! series (Pull request 70)
+
 # 25-Feb-2013
 
 * Added build directory
