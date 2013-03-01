@@ -1,3 +1,13 @@
+# 1-Mar-2013
+
+* added lasidlav correction of help string of *exp* and *log-e*
+* Added **r3-guir.r3** in *build/windows/* directory, 
+this way you don't need to load from internet; just launch
+
+    do %r3-gui.r3
+
+
+
 # 27-Feb-2013
 
 * Added *hostilefork* suggestion to allow NEW-LINE and NEW-LINE? to accept PAREN! series (Pull request 70)
