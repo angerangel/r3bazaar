@@ -123,7 +123,7 @@ BOOL Init_Console()
 {
     if (!Std_Out && Con_Out){
 
-        REBCHR *title = TEXT("REBOL 3 Alpha");
+        REBCHR *title = TEXT("REBOL 3 Bazaar");
         HANDLE win;
 
         if (!AllocConsole()) {

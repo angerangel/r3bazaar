@@ -454,7 +454,7 @@ bugs: func [
 	"View bug database."
 ][
 	say-browser
-	browse http://curecode.org/rebol3/
+	browse https://github.com/angerangel/r3bazaar/issues
 	exit
 ]
 
@@ -462,7 +462,7 @@ changes: func [
 	"What's new about this version."
 ][
 	say-browser
-	browse http://www.rebol.com/r3/changes.html
+	browse https://github.com/angerangel/r3bazaar/commits/master
 	exit
 ]
 
@@ -493,12 +493,13 @@ demo: funct [
 	"Run R3 demo."
 ][
 	print "Fetching demo..."
-	if error? err: try [do http://www.rebol.com/r3/demo.r none][
-		either err/id = 'protocol [print "Cannot load demo from web."][do err]
+	if error? err: try [do %demo.r none][
+		either err/id = 'protocol [print "Cannot find demo."][do err]
 	]
 	exit
 ]
 
+;this function is usually patched by rma-pactches.r
 load-gui: funct [
 	"Download current GUI module from web. (Temporary)"
 ][

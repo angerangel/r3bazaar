@@ -1,3 +1,10 @@
+#8-Mar-2013
+
+* changed *bugs*
+* changed *changes*
+* corrected *demo*
+* added demo in *builds/windows*
+
 # 1-Mar-2013
 
 * added lasidlav correction of help string of *exp* and *log-e*
