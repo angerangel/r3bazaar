@@ -43,5 +43,9 @@ Windows binaries are ready to use in *build* directory, but if you want to build
 *make* directory and follwo this guide: https://github.com/angerangel/r3bazaar/wiki/Building-from-source
 
 ##Contact
-Use Github, http://rebol.inform.com or send an email to maxint@tiscali.it
+You may use
+
+* Github
+* http://rebol.informe.com
+* send an email to maxint@tiscali.it
 
