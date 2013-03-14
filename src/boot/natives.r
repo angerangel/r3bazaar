@@ -47,7 +47,7 @@ apply: native [
 ]
 
 assert: native [
-	"Assert that condition is true, else throw an assertion error."
+	"Assert that condition is true, else cause an assertion error."
 	conditions [block!]
 	/type "Safely check datatypes of variables (words and paths)"
 ]
@@ -343,18 +343,18 @@ while: native [
 
 bind: native [
 	{Binds words to the specified context.}
-	word [block! any-word!] {A word or block of words (modified) (returned)}
+	word [block! any-word!] {A word or block (modified) (returned)}
 	context [any-word! any-object!] {A reference to the target context}
-	/copy {Deep copy block before binding it}
+	/copy {Bind and return a deep copy of a block, don't modify original} 
 	/only {Bind only first block (not deep)}
 	/new {Add to context any new words found}
 	/set {Add to context any new set-words found}
 ]
 
 unbind: native [
-	{Unbinds words from context. (Modifies)}
-	word [block! any-word!] {A word or block of words (modified) (returned)}
-	/deep "Include nested blocks"
+	{Unbinds words from context.}
+          word [block! any-word!] {A word or block (modified) (returned)}
+          /deep "Process nested blocks" 
 ]
 
 bound?: native [
@@ -651,7 +651,7 @@ transcode: native [
 	source [binary!] "Must be Unicode UTF-8 encoded"
 	/next "Translate next complete value (blocks as single value)"
 	/only "Translate only a single value (blocks dissected)"
-	/error "Do not throw errors - return error object as value in place"
+	/error "Do not cause errors - return error object as value in place"
 ]
 
 echo: native [
@@ -837,8 +837,8 @@ shift: native [
 ]
 
 first+: native [
-	{Return FIRST of series, and increment the series index.}
-	'word [word!] "Word must be a series"
+	{Return the FIRST of a series then increment the series index.}
+          'word [word!] "Word must refer to a series" 
 ]
 
 stack: native [

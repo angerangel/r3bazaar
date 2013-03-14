@@ -1,3 +1,17 @@
+
+# 14-Mar-2013
+
+* added ladislav corrections on help string of *assertion* and *transcode*
+* added ladislav corrections on help string of *first+*
+* added ladislav corrections on help string of *BIND* and *UNBIND*
+* added ladislav Make build platform handling more robust
+* added ladislav Fix clipboard device code so it works identically under non-wide-char platforms
+* added earl Fix PARSE *THRU* integer operation
+* added cyphre *DECOMPRESS/GZIP* fix
+* cyphre fix allows to set event/window or event/gob fields. 
+* ladislav Fix GC crash with gob/parent handling
+
+
 #8-Mar-2013
 
 * changed *bugs*
