@@ -1,7 +1,7 @@
 # What is Rebol 3 Bazaar?
 
-It's the rebol 3 version initially developed by Saphirion (see http://development.saphirion.com/ ),
-it has graphic functionality (VID dialect) working on windows.
+It's a fork of the original Rebol 3 with enhancemnt of Saphirion (see http://development.saphirion.com/ ),
+it has graphic functionality (VID dialect) but at moment works just on windows.
 
 # What is Rebol?
 Rebol is a fantastic programming language, cross-platform, really easy to use and to create wonderful gui, 
