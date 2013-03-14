@@ -42,10 +42,10 @@ alway considered and eventually merged in **maximum a week**.
 Windows binaries are ready to use in *build* directory, but if you want to build from source
 *make* directory and follwo this guide: https://github.com/angerangel/r3bazaar/wiki/Building-from-source
 
-##Contact
+#Contacts
 You may use
 
-* Github
-* http://rebol.informe.com
+* Github issues ( https://github.com/angerangel/r3bazaar/issues )
+* http://rebol.informe.com rebol community portal, with forum, blog, wiki and image gallery
 * send an email to maxint@tiscali.it
 
