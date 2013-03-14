@@ -493,7 +493,11 @@ demo: funct [
 	"Run R3 demo."
 ][
 	print "Fetching demo..."
-	if error? err: try [do %demo.r none][
+	if error? err: try [ 
+		;is there a way to check if load-gui is already loaded?
+		either exists? %r3-gui.r  [ do %r3-gui.r ] [ load-gui ]
+		either exists? %demo.r [do %demo.r none] [do https://raw.github.com/angerangel/r3bazaar/master/builds/windows/demo.r ] 
+		] [
 		either err/id = 'protocol [print "Cannot find demo."][do err]
 	]
 	exit

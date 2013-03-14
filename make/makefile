@@ -76,6 +76,14 @@ all:
 	$(MAKE) r3-view
 	$(MAKE) encap-core
 	$(MAKE) encap-view
+
+view: 
+	$(MAKE) clean
+	$(MAKE) lib	
+	$(MAKE) r3-core-host
+	$(MAKE) r3-view-host
+	$(MAKE) r3-core
+	$(MAKE) r3-view
 	
 prep-lib:
 	$(REBOL) $T/make-headers.r

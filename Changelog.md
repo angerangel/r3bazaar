@@ -12,7 +12,11 @@
 * ladislav Fix GC crash with gob/parent handling
 * 0branch  Implement BROWSE on Mac OS X
 * 0branch  BROWSE: Return R_UNSET rather than R_NONE
-
+* BrianHawley REWORD API Revamp
+* 0branch fix Round decimal division of tuple elements
+* added `make view` rule in *makefile*
+* improved *demo*
+* changed file name *r3-gui.r3*  to *r3-gui.r*
 
 #8-Mar-2013
 

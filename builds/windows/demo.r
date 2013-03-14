@@ -1,5 +1,5 @@
 Rebol [title "VID demo"]
-load-gui
+
 ;if  request/ask "VID DEMO" "Do you want VID demo starting?" [ 
 
 ;alert "VID demo starting!"
