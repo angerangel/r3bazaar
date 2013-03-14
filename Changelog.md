@@ -10,6 +10,8 @@
 * added cyphre *DECOMPRESS/GZIP* fix
 * cyphre fix allows to set event/window or event/gob fields. 
 * ladislav Fix GC crash with gob/parent handling
+* 0branch  Implement BROWSE on Mac OS X
+* 0branch  BROWSE: Return R_UNSET rather than R_NONE
 
 
 #8-Mar-2013
