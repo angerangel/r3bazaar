@@ -508,7 +508,7 @@ load-gui: funct [
 	"Download current GUI module from web. (Temporary)"
 ][
 	print "Fetching GUI..."
-	either error? data: try [load http://www.rebol.com/r3/gui.r][
+	either error? data: try [load http://www.saphirion.com/development/downloads-2/files/r3-gui.r3][
 		either data/id = 'protocol [print "Cannot load GUI from web."][do err]
 	][
 		do data

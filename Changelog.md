@@ -1,3 +1,11 @@
+# 20-Mar-2013
+
+* 0branch fix ensure that binary series constructed from blocks are distinct
+
+# 18-Mar-2013
+
+* added *logo*, now *logo* is an image of Rebol logo
+
 
 # 14-Mar-2013
 

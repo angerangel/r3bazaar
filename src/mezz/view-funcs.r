@@ -246,3 +246,5 @@ init-view-system: func [
 ]
 
 init-view-system
+
+logo: load  %reb-logo.gif
