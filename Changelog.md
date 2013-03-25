@@ -1,6 +1,7 @@
 # 20-Mar-2013
 
 * 0branch fix ensure that binary series constructed from blocks are distinct
+* added *snd_win32.c* file for sound support in Windows
 
 # 18-Mar-2013
 
