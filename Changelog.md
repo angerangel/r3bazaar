@@ -1,7 +1,16 @@
+#26-Mar-2013
+
+* Added *make prep* in make file
+
+# 25-Mar-2013
+
+* corrected mispelled word find-all help string
+
+
 # 20-Mar-2013
 
 * 0branch fix ensure that binary series constructed from blocks are distinct
-* added *snd_win32.c* file for sound support in Windows
+* added *snd_win32.c* file for sound support in Windows, thanks to Pekr
 
 # 18-Mar-2013
 

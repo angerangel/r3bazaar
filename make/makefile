@@ -84,6 +84,14 @@ view:
 	$(MAKE) r3-view-host
 	$(MAKE) r3-core
 	$(MAKE) r3-view
+
+prep:
+	$(REBOL) $T/make-headers.r
+	$(REBOL) $T/make-boot.r $(OS_ID)
+	$(REBOL) $T/make-host-init.r
+	$(REBOL) $T/make-os-ext.r # ok, but not always
+	$(REBOL) $T/make-host-ext.r
+	$(REBOL) $T/make-reb-lib.r
 	
 prep-lib:
 	$(REBOL) $T/make-headers.r

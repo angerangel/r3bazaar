@@ -461,7 +461,7 @@ split: func [	; Gabriele, Gregg
 ]
 
 find-all: funct [
-    "Find all occurences of the value within the series (allows modification)."
+    "Find all occurrences of the value within the series (allows modification)."
     'series [word!] "Variable for block, string, or other series"
     value
     body [block!] "Evaluated for each occurence"
