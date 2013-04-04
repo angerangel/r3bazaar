@@ -45,7 +45,7 @@ REBOL [
 	%mezz-help.r ; move dump-obj!
 	%mezz-banner.r
 	%mezz-colors.r
-	%mezz-tail.r
+	%mezz-tail.r	
 ]
 
 ;-- protocols:

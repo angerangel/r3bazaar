@@ -5,7 +5,7 @@ REBOL [
     url: http://www.rm-asset.com/code/downloads/
     history: http://development.saphirion.com/resources/r3-gui.r3
     license: "Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/"
-    version: 4467
+    version: 4467.2
     date: 17-Dec-2012/18:12:03.162682
     purpose: "REBOL 3 GUI module"
 ]
@@ -11667,3 +11667,11 @@ stylize [
 ]
 system/view/event-port: none
 init-view-system
+
+either exists? %images/images.r [do %images/images.r ] [ 
+	do  https://raw.github.com/angerangel/r3bazaar/master/builds/windows/images/images.r
+	make-dir %images/
+	write %images/images.r ( read https://raw.github.com/angerangel/r3bazaar/master/builds/windows/images/images.r )
+	]
+	
+

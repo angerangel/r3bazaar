@@ -1,3 +1,9 @@
+# 4-Apr-2013
+
+* added further images, easy to configure and add, see images directory
+* added ladislav Collect unused GOBs
+
+
 #26-Mar-2013
 
 * Added *make prep* in make file

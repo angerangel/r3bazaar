@@ -114,6 +114,9 @@ static void Mark_Series(REBSER *series, REBCNT depth);
 {
 	REBGOB **pane;
 	REBCNT i;
+	if (IS_GOB_MARK(gob)) return;
+
+	MARK_GOB(gob); 
 
 	if (GOB_PANE(gob) && !IS_MARK_SERIES(GOB_PANE(gob))) { 
 		MARK_SERIES(GOB_PANE(gob));
@@ -123,7 +126,7 @@ static void Mark_Series(REBSER *series, REBCNT depth);
 		}
 	}
 
-	//if (GOB_PARENT(gob)) Mark_Gob(GOB_PARENT(gob));
+	//if (GOB_PARENT(gob)) Mark_Gob(GOB_PARENT(gob));	
 	if (GOB_PARENT(gob)) Mark_Gob(GOB_PARENT(gob), depth); 
 	
 	if (GOB_CONTENT(gob)) {
@@ -408,6 +411,48 @@ mark_obj:
 }
 
 
+ /***********************************************************************
+ **
+*/  static REBCNT Sweep_Gobs(void)
+/*
+**    Free all unmarked gobs.
+**
+**    Scans all gobs in all segments that are part of the
+**    GOB_POOL. Free gobs that have not been marked.
+**
+***********************************************************************/
+{
+  REBSEG  *seg;
+  REBGOB  *gob;
+  REBCNT  n;
+  REBCNT  count = 0;
+
+  for (seg = Mem_Pools[GOB_POOL].segs; seg; seg = seg->next) {
+    gob = (REBGOB *) (seg + 1);
+    for (n = Mem_Pools[GOB_POOL].units; n > 0; n--) {
+#ifdef MUNGWALL
+      gob = (gob *) (((REBYTE *)s)+MUNG_SIZE);
+      MUNG_CHECK(GOB_POOL, gob, sizeof(*gob));
+#endif
+      if (IS_GOB_USED(gob)) {
+        if (IS_GOB_MARK(gob))
+          UNMARK_GOB(gob);
+        else {
+          Free_Gob(gob);
+          count++;
+        }
+      }
+      gob++;
+#ifdef MUNGWALL
+      gob = (gob *) (((REBYTE *)s)+MUNG_SIZE);
+#endif
+    }
+  }
+
+  return count;
+}
+ 
+
 /***********************************************************************
 **
 */	REBCNT Recycle(void)
@@ -476,6 +521,7 @@ mark_obj:
 	Mark_Series(Task_Series, 0);
 
 	count = Sweep_Series();
+	count += Sweep_Gobs(); 
 
 	CHECK_MEMORY(4);
 
