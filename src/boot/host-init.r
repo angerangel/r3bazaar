@@ -1366,18 +1366,10 @@ import module [
         ]
     ] 'http
 ]
-load-gui: func [
-    {Download current Spahirion's R3-GUI module from web.}
-    /local data
-] [
-    print "Fetching GUI..."
-    either error? data: try [load http://www.saphirion.com/development/downloads-2/files/r3-gui.r3] [
-        either data/id = 'protocol [print "Cannot load GUI from web."] [do err]
-    ] [
-        do data
-    ]
-    exit
-]
+
+;there are too many load-gui in source files, let's remove them
+
+
 encode: funct [
     {Encodes a datatype (e.g. image!) into a series of bytes.}
     type [word!] "Media type (jpeg, png, etc.)"

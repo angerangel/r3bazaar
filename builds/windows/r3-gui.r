@@ -11667,11 +11667,5 @@ stylize [
 ]
 system/view/event-port: none
 init-view-system
-
-either exists? %images/images.r [do %images/images.r ] [ 
-	do  https://raw.github.com/angerangel/r3bazaar/master/builds/windows/images/images.r
-	make-dir %images/
-	write %images/images.r ( read https://raw.github.com/angerangel/r3bazaar/master/builds/windows/images/images.r )
-	]
 	
 

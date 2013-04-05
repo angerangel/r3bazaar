@@ -494,8 +494,8 @@ demo: funct [
 ][
 	print "Fetching demo..."
 	if error? err: try [ 
-		;is there a way to check if load-gui is already loaded?
-		either exists? %r3-gui.r  [ do %r3-gui.r ] [ load-gui ]
+		;logo is loaded by load-gui
+		if not value? 'logo [	either exists? %r3-gui.r  [ do %r3-gui.r ] [ load-gui ] ]
 		either exists? %demo.r [do %demo.r none] [do https://raw.github.com/angerangel/r3bazaar/master/builds/windows/demo.r ] 
 		] [
 		either err/id = 'protocol [print "Cannot find demo."][do err]
@@ -503,15 +503,16 @@ demo: funct [
 	exit
 ]
 
-;this function is usually patched by rma-pactches.r
+;this function was usually patched by rma-pactches.r
 load-gui: funct [
-	"Download current GUI module from web. (Temporary)"
+	"Download current GUI module from local or from web."
+	
 ][
 	print "Fetching GUI..."
-	either error? data: try [load http://www.saphirion.com/development/downloads-2/files/r3-gui.r3][
-		either data/id = 'protocol [print "Cannot load GUI from web."][do err]
-	][
-		do data
+	file-list: [%r3-gui.r %images/images.r ]
+	foreach item file-list [
+		either exists? item [  do item ] [ 		
+			do  ( join https://raw.github.com/angerangel/r3bazaar/master/builds/windows/ item )			
+			]
+		]	
 	]
-	exit
-]

@@ -1,8 +1,11 @@
-Rebol [title "VID demo"]
+Rebol [
+	title: "R3 GUI demo"
+	date: 5-Apr-2013/17:26:38+2:00
+	version:  2.0.0  ;it doesn't has much sense since the correct verion number is on GitHub site
+	license: "Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/"
+	]
 
-;if  request/ask "VID DEMO" "Do you want VID demo starting?" [ 
 
-;alert "VID demo starting!"
 
 view  [
 	hpanel [	
