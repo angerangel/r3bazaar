@@ -1,3 +1,10 @@
+# 11-Apr-2013
+
+* Added test scripts, see the tests folder
+* added gchiu correction to do-redirect 
+* added BrianHawley Private module imports take precedence
+* added earl Fix crash in RESOLVE/extend/only
+
 # 4-Apr-2013
 
 * added further images, easy to configure and add, see images directory
