@@ -1,7 +1,7 @@
 Rebol [
 	title: "R3 GUI demo"
 	date: 5-Apr-2013/17:26:38+2:00
-	version:  2.0.1  ;it doesn't has much sense since the correct verion number is on GitHub site
+	version:  2.0.2  ;it doesn't has much sense since the correct verion number is on GitHub site
 	license: "Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/"
 	]
 
@@ -62,7 +62,7 @@ view  [
 			code "code style" 400x50
 			area "area, you may write here" 400x50
 			text "code-area"
-			code-area (to-string read %demo.r ) 400x50
+			code-area (if exists? %demo.r [to-string read %demo.r ]) 400x50
 			info-area "info-area" 400x50
 			text "color-picker:"
 			color-picker
