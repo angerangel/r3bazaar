@@ -1,3 +1,8 @@
+# 18-Apr-2013
+
+* Corrected demo, adde Cyphre version for Android
+
+
 # 11-Apr-2013
 
 * Added test scripts, see the tests folder

@@ -1159,6 +1159,9 @@ import module [
     do-redirect: func [port [port!] new-uri [url! string! file!] /local spec state] [
         spec: port/spec
         state: port/state
+        if #"/" = first new-uri [
+            new-uri: to url! ajoin [spec/scheme "://" spec/host new-uri]
+        ]
         new-uri: decode-url new-uri
         unless select new-uri 'port-id [
             switch new-uri/scheme [
@@ -1366,10 +1369,6 @@ import module [
         ]
     ] 'http
 ]
-
-;there are too many load-gui in source files, let's remove them
-
-
 encode: funct [
     {Encodes a datatype (e.g. image!) into a series of bytes.}
     type [word!] "Media type (jpeg, png, etc.)"
@@ -1481,33 +1480,3 @@ import module [
     ]
     tmp: fix: none
 ]
-console-output false
-use [decrypt err f s d b c e k] [
-    decrypt: funct [
-        data [string! binary!]
-    ] [
-        out: copy #{}
-        random/seed "REBOL"
-        foreach c data [
-            append out c - random 100
-        ]
-        to-string debase/base reverse out 64
-    ]
-    if error? err: try [
-        f: open/read/seek system/options/boot
-        s: length? f
-        d: copy skip f s - 9
-        b: to integer! next d
-        c: d/1
-        d: copy/part skip head f b e: s - b - 9 - c
-        k: decrypt copy/part skip head f b + e c
-        d: decode 'text decompress decloak d k
-        close f
-        do load d
-    ] [
-        show-console
-        print form err
-        error? try [ask "** Press enter to quit..."]
-    ]
-]
-quit
