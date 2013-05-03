@@ -39,7 +39,7 @@ alway considered and eventually merged in **maximum a week**.
 
 #How to build from source?
 
-Windows binaries are ready to use in *build* directory, but if you want to build from source
+Windows binaries are ready to use in *build* directory, just dowload **all the folder**;  but if you want to build from source
 *make* directory and follwo this guide: https://github.com/angerangel/r3bazaar/wiki/Building-from-source
 
 #Contacts

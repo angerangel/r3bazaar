@@ -1,6 +1,9 @@
 rebol [
-title: "test script"
-purpose: {put your test here, and launch "t" to test it}
+title: "editor"
+purpose: {Built in editor}
+author: "Massimliano Vessi"
+version: 1
+date: 3-May-2013
 ]
 
 

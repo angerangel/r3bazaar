@@ -511,7 +511,7 @@ load-gui: funct [
 	;logo is loaded by load-gui
 	if not value? 'logo [
 		print "Fetching GUI..."	
-		file-list: [%r3-gui.r %images/images.r ]
+		file-list: [%r3-gui.r %images/images.r  %editor.r ]
 		foreach item file-list [
 			either exists? item [  do item ] [ 		
 				do  ( join https://raw.github.com/angerangel/r3bazaar/master/builds/windows/ item )			
