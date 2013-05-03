@@ -2,7 +2,7 @@ rebol [
 title: "editor"
 purpose: {Built in editor}
 author: "Massimliano Vessi"
-version: 1
+version: 1.3
 date: 3-May-2013
 ]
 
@@ -13,11 +13,11 @@ editor: func [
 	/local
 	aa  ;area text
 	file ;file path
-	saved? ;check saving function
 	ss ;saving widget
 	aa-info ; path display widget
 	] [
-	
+
+
 ; check if input is none
 if none? in-text [file: none in-text: copy "" ]
 
@@ -29,48 +29,64 @@ either  not ( (type? in-text) = string! ) [
 	file: none 
 	]
 
-;save, check if text is changed before losing it forever
-saved?: does [
-	if (ss/options/text-body = "*") [
-		view [		
-		title "Alert! File not saved, do you want save it?"
-		hpanel [
-			button  green "Save" on-action [ 
-				if none? file [ file: request-file/title "Choose file name and destination" ]
-				set-face 
-				write file aa/names/tb/state/value 
-				]
-			button red "Cancel"  on-click [unview]
-			]
-		]
-		]
-	]
 	
 ;GUI
+
 view [ 	
 	hgroup [
 		button  "Open" on-action [ 
-			saved?
+			if ((get-face ss) = "*") [
+				view/modal [		
+					title "Alert! File not saved, do you want save it?"
+					hpanel [
+						button  green "Save" on-action [ 
+							if ((get-face aa-info) = " " ) [ 
+								file: request-file/title "Choose file name and destination" 
+								set-face aa-info (to-string file)
+								]
+							write (to-file AA-INFO/OPTIONS/text-edit)  aa/names/tb/state/value 
+							]
+						button red "Cancel"  on-click [unview]
+						]
+					]
+				]			
 			file: request-file 
 			set-face aa (to-string read file )
 			set-face aa-info (to-string file)
 			]
 		button "New" on-action [
-			saved?
-			file: none
+			if ((get-face ss) = "*") [
+				view [		
+					title "Alert! File not saved, do you want save it?"
+					hpanel [
+						button  green "Save" on-action [ 
+							if ((get-face aa-info) = " " ) [ 
+								file: request-file/title "Choose file name and destination" 
+								set-face aa-info (to-string file)
+								]
+							write (to-file AA-INFO/OPTIONS/text-edit)  aa/names/tb/state/value 
+							]
+						button red "Cancel"  on-click [unview]
+						]
+					]
+				]
+			file: request-file/title "New file name?" 
+			set-face aa-info (to-string file)
 			set-face aa/names/tb/state/value  ""
 			]
 		;button "Find"
-		button "Save" on-action [
-			if none? file [ file: request-file/title "Choose file name and destination" ]
-			set-face aa-info (to-string file)
-			write file aa/names/tb/state/value 
+		button "Save" on-action [		
+			if ((get-face aa-info) = " " )  [ 
+				file: request-file/title "Choose file name and destination" 
+				set-face aa-info (to-string file) 
+				]
+			write (to-file AA-INFO/OPTIONS/text-edit)  aa/names/tb/state/value 
 			set-face ss " "
 			]
 		button"Save-As" on-action [
 			file: request-file/title "Choose file name and destination" 
 			set-face aa-info (to-string file)
-			write file aa/names/tb/state/value 
+			write (to-file AA-INFO/OPTIONS/text-edit) aa/names/tb/state/value 
 			set-face ss " "
 			]
 		button "Help" on-action [ 
@@ -88,9 +104,23 @@ F5 - to execute (do)
 					]
 				]	
 			]
-		button "Quit" on-click [			
-			saved?
-			unview
+		button "Quit" on-action [			
+			if ((get-face ss) = "*") [
+				view  [		
+					title "Alert! File not saved, do you want save it?"
+					hpanel [
+						button  green "Save" on-action [ 
+							if ((get-face aa-info) = " " )  [ 
+								file: request-file/title "Choose file name and destination" 
+								set-face aa-info (to-string file) 
+								]
+							write (to-file AA-INFO/OPTIONS/text-edit)  aa/names/tb/state/value 
+							]
+						button red "Cancel"  on-click [unview]
+						]
+					]
+				]
+			unview/all
 			]
 		]
 	hgroup [ 
@@ -105,8 +135,7 @@ F5 - to execute (do)
 			set-face ss "*"
 			if arg/key = 'f5 [ 	try load face/names/tb/state/value ]	
 			]	
-		]	
-		button on-action [print saved?]	
+		]			
 	]
 	;end of GUI
 ]	
