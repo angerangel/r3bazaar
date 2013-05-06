@@ -2,7 +2,7 @@ rebol [
 title: "editor"
 purpose: {Built in editor}
 author: "Massimliano Vessi"
-version: 1.3
+version: 1.4
 date: 3-May-2013
 ]
 
@@ -72,7 +72,7 @@ view [
 				]
 			file: request-file/title "New file name?" 
 			set-face aa-info (to-string file)
-			set-face aa/names/tb/state/value  ""
+			set-face aa  ""
 			]
 		;button "Find"
 		button "Save" on-action [		
