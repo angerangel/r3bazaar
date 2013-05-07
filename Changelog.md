@@ -1,3 +1,7 @@
+#  6-May-2013
+
+* Added editor
+
 # 18-Apr-2013
 
 * Corrected demo, adde Cyphre version for Android
