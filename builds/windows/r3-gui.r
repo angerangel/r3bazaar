@@ -11691,6 +11691,19 @@ fontize [
 	h3: h1 [ font: [ size: 14]	]	
 	h4: h1 [ font: [ size: 12]	]	
 	h5: h4 [ font: [ style: 'italic  ]]	
+	vh1: h1 [
+		font: [
+			color: 255.255.255
+			shadow: [3x3 128.128.128 ]			
+			]
+		]
+	vh2: vh1 [ font: [ size: 16]	]	
+	vh3: vh1 [ font: [ size: 14]	]	
+	vh4: vh1 [ font: [ 
+			size: 12 
+			shadow: [1x1 128.128.128 ]			
+		]	]
+	vh5: vh4 [ font: [ style: 'italic  ]]	
 	]
 
 stylize [
@@ -11699,6 +11712,11 @@ stylize [
 	h3: text [ facets: [ text-style:  'h3]]
 	h4: text [ facets: [ text-style:  'h4]]
 	h5: text [ facets: [ text-style:  'h5]]
+	vh1: text [ facets: [ text-style:  'vh1]]
+	vh2: text [ facets: [ text-style:  'vh2]]
+	vh3: text [ facets: [ text-style:  'vh3]]
+	vh4: text [ facets: [ text-style:  'vh4]]
+	vh5: text [ facets: [ text-style:  'vh5]]
 	]		
 	
 

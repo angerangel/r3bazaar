@@ -1,6 +1,8 @@
 # 13-May-2013
 
 * added h1 to h5 text styles
+* added Cyphre correction to editor
+* added Vh1 to v5 text styles
 
 #  6-May-2013
 
