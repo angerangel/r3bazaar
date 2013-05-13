@@ -9216,6 +9216,8 @@ temp-ctx-doc: context [
         reduce ['vpanel out]
     ] [table? image-root]
 ]
+
+; here starts all R3GUi styles, put them inside a stylize[];
 stylize [
     doc: plane [
         about: {A tiny document markup method for embedded docs, notes, messages.}
@@ -11664,8 +11666,40 @@ stylize [
             ]
         ]
     ]
+
+
+    
 ]
 system/view/event-port: none
 init-view-system
+
+;other text styles:
+
+fontize [
+	h1: base [
+		font: [
+			name: "Arial"
+			style: 'bold
+			size: 18
+			color: 0.0.0
+			offset: 0x0
+			space: 0x0
+			shadow: none
+			]
+		]
+	h2: h1 [ font: [ size: 16]	]	
+	h3: h1 [ font: [ size: 14]	]	
+	h4: h1 [ font: [ size: 12]	]	
+	h5: h4 [ font: [ style: 'italic  ]]	
+	]
+
+stylize [
+	h1: text [ facets: [ text-style:  'h1]]
+	h2: text [ facets: [ text-style:  'h2]]
+	h3: text [ facets: [ text-style:  'h3]]
+	h4: text [ facets: [ text-style:  'h4]]
+	h5: text [ facets: [ text-style:  'h5]]
+	]		
 	
+
 

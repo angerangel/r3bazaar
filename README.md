@@ -1,6 +1,6 @@
 # What is Rebol 3 Bazaar?
 
-It's a fork of the original Rebol 3 with enhancemnt of Saphirion (see http://development.saphirion.com/ ),
+It's a fork of the original Rebol 3 with enhancemnt of Saphirion (see http://development.saphirion.com/ ) and the rebol community,
 it has graphic functionality (VID dialect) but at moment works just on windows.
 
 # What is Rebol?
