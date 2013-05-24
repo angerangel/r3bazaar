@@ -60,7 +60,7 @@ view/options [
 			]
 		nn: button "New" on-action [
 			if ((get-face ss) = "*") [
-				view [		
+				view/modal [		
 					title "Alert! File not saved, do you want save it?"
 					hpanel [
 						button  green "Save" on-action [ 
@@ -119,7 +119,7 @@ Ctrl-V - paste text
 			]
 		qq: button "Quit" on-action [			
 			if ((get-face ss) = "*") [
-				view  [		
+				view/modal  [		
 					title "Alert! File not saved, do you want save it?"
 					hpanel [
 						button  green "Save" on-action [ 
