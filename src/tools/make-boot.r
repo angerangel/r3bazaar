@@ -132,8 +132,8 @@ up-word: func [w] [
 ]
 
 ;-- Emit Function
-out: make string! 100000
-emit: func [data] [repend out data]
+out: copy ""
+emit: func [data] [repend out data] ; it appends data to out
 
 to-c-name: func [word] [
 	word: form word

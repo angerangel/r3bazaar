@@ -1,3 +1,7 @@
+# 24-May-2013
+
+*Improved editor, now it launch an externa process pressing F5, and it works better
+
 # 13-May-2013
 
 * added h1 to h5 text styles
