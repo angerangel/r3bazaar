@@ -11680,7 +11680,7 @@ fontize [
 		font: [
 			name: "Arial"
 			style: 'bold
-			size: 18
+			size: 20
 			color: 0.0.0
 			offset: 0x0
 			space: 0x0
@@ -11704,6 +11704,19 @@ fontize [
 			shadow: [1x1 128.128.128 ]			
 		]	]
 	vh5: vh4 [ font: [ style: 'italic  ]]	
+	vtext: base [
+		font: [
+			color: 255.255.255
+			shadow: [1x1 128.128.128]
+			]
+		]
+	banner: h1 [ 
+		font: [
+			size: 24
+			color:  250.215.0
+			shadow: [3x3 128.128.128 ]			
+			]
+		]
 	]
 
 stylize [
@@ -11717,6 +11730,44 @@ stylize [
 	vh3: text [ facets: [ text-style:  'vh3]]
 	vh4: text [ facets: [ text-style:  'vh4]]
 	vh5: text [ facets: [ text-style:  'vh5]]
+	vtext: text [ facets: [ text-style:  'vtext]]
+	banner: text [ facets: [ text-style:  'banner]]
+	btn-cancel: button  [
+		facets: [
+			init-size: 0x24
+			text: "Cancel"
+			text-style: 'button
+			max-size: 80x24
+			min-size: 0x0
+			text-size-pad: 0x0
+			bg-color: 103.142.255
+			border-color: 144.174.255
+			]			
+		]
+	btn-enter: button  [
+		facets: [
+			init-size: 0x24
+			text: "Enter"
+			text-style: 'button
+			max-size: 80x24
+			min-size: 0x0
+			text-size-pad: 0x0
+			bg-color: 255.100.0
+			border-color: 255.190.155
+			]			
+		]	
+	btn-help: button  [
+		facets: [
+			init-size: 0x24
+			text: "?"
+			text-style: 'button
+			max-size: 24x24
+			min-size: 0x0
+			text-size-pad: 0x0
+			bg-color: 255.80.80
+			border-color: 255.190.155
+			]			
+		]		
 	]		
 	
 

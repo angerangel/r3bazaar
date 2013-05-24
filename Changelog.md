@@ -1,6 +1,9 @@
 # 24-May-2013
 
-*Improved editor, now it launch an externa process pressing F5, and it works better
+* Improved editor, now it launch an externa process pressing F5, and it works better
+* added banner text style
+* added vtext text style
+* added btn-cancel, btn-enter, btn-help button styles
 
 # 13-May-2013
 

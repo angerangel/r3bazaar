@@ -155,7 +155,10 @@ Ctrl-V - paste text
 			#"^O" [  oo/actors/on-action oo none ]
 			#"^S" [ either (find arg/flags 'shift) [ssss/actors/on-action ssss none] [ sss/actors/on-action sss none] ]
 			#"^Q" [  qq/actors/on-action qq none ]	
-			f5 [  call  reform [{./r3-view --do "load-gui  }  (get-face aa) {"}] ]
+			f5 [  
+				write %test.r  (get-face aa)
+				call  {./r3-view --do "load-gui" test.r }  
+				]
 			]
 		]
 	;end of GUI
