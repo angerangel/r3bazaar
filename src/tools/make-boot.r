@@ -35,7 +35,10 @@ has-graphics: false ;not not find graphics-targets target
 
 opts: system/options/args
 
-if all [block? opts opts/1 = ">"] [opts: none] ; cw editor
+if all [
+	block? opts 
+	opts/1 = ">"
+	] [opts: none] ; cw editor
 
 if block? opts [
 	if find opts "no-gfx" [

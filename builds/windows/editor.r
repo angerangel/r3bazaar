@@ -145,8 +145,7 @@ Ctrl-V - paste text
 	aa: area in-text  on-key [
 		do-actor/style face  'on-key arg 'area  ;This is the normal area behaviour		
 		if arg/type = 'key [ ;otherwise it happe two times	
-			set-face ss "*"
-			;if arg/key = 'f5 [ 	try load face/names/tb/state/value ]	
+			set-face ss "*"			
 			]	
 		]			
 	] [ ;options, shortcuts:
