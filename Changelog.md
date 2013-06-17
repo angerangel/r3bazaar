@@ -1,3 +1,8 @@
+# 17-Jun-2013
+
+* Added @earl Fix incorrect boot flags order
+
+
 # 24-May-2013
 
 * Improved editor, now it launch an externa process pressing F5, and it works better
